@@ -1,0 +1,26 @@
+$lighten: 15%;
+$darken: 15%;
+
+$primary1: #39435F;
+$primary1-light: lighten($primary1, $lighten);
+
+$primary2: #E3AC1B;
+$primary2-light: lighten($primary2, $lighten);
+
+$primary3: #333333;
+$primary3-light: lighten($primary3, $lighten);
+
+$success: #61E31B;
+$danger: #E7733F;
+
+$white: #FFFFFF;
+$grey1: #EBEBEB;
+$grey2: #A2A2A2;
+$grey2-dark: darken($grey2, $darken);
+$grey3: #BFBFBF;
+$grey4: #F4F4F4;
+$grey5: #E4E4E4;
+$grey6: #FAFAFA;
+$grey7: #555555;
+$grey8: #707070;
+$black: #000000;

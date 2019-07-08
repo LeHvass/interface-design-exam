@@ -1,0 +1,132 @@
+.login .container {
+  display: grid;
+  grid-template-columns: 1fr minmax(400px,1fr);
+  min-height: 100vh;
+
+  .logo {
+    width: 300px;
+  }
+
+  aside {
+    background-image: url('https://placehold.it/1500x1500');
+  }
+
+  main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+    
+    form {
+      max-width: 365px;
+      display: grid;
+      
+      .btns-inline {
+        display: grid;
+        grid-gap: 25px;
+        grid-template-columns: 1fr 1fr;
+
+        a {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .field {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  
+  .label, .input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+  }
+  
+  .input {
+    -webkit-appearance: none;
+    cursor: text;
+  }
+  
+  .label {
+    font-size: 12px;
+    color: $grey2;
+    font-weight: bold;
+  }
+  
+  .input:placeholder-shown + .label {
+    cursor: text;
+    color: $grey2;
+    font-weight: bold;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(20px, 2.2rem) scale(1.25);
+  }
+  
+  ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+  
+  .input:focus::-webkit-input-placeholder {
+    opacity: 1;
+  }
+  
+  .input:not(:placeholder-shown) + .label,
+  .input:focus + .label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+  }
+}
+
+.divider{
+  overflow: hidden;
+  text-align: center;
+
+  span{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: $grey3;
+    font-weight: bold;
+
+    &:before, &:after {
+      content: ""; 
+      position: absolute;
+      top: 50%; margin-top: -1px;
+      height: 1px;
+      border-top: 1px solid $grey3;
+      width: 200em;
+    }
+
+    &:before {
+      right: 100%;
+      margin-right: .5em;
+    }
+    &:after {
+      left: 100%;
+      margin-left: .5em;
+    }
+  }
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: $grey2;
+  white-space: nowrap;
+}

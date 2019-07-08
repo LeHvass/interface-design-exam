@@ -1,0 +1,61 @@
+@mixin button($element, $element-light) {
+  background: $element;
+  border-color: $element;
+  text-decoration: none;
+  &.btn-outline {
+    color: $element;
+  }
+  &:hover {
+    background: $element-light;
+    border-color: $element-light;
+    &.btn-outline {
+      color: $element-light;
+    }
+  }
+}
+
+.btn {
+  font-size: 16px;
+  color: $white;
+  padding: 8px 20px;
+  border-style: solid;
+  border-width: 2px;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.btn-primary {
+    @include button($primary1, $primary1-light);
+  }
+
+  &.btn-secondary {
+    @include button($primary2, $primary2-light);
+  }
+
+  &.btn-tertiary {
+    @include button($primary3, $primary3-light);
+  }
+  
+  &.btn-outline {
+    background: transparent;
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  &.btn-small {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .btn-image {
+    float: left;
+    margin-right: 10px;
+  }
+
+  &.btn-full-width {
+    width: 100%;
+  }
+}

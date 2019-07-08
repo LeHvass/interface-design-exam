@@ -1,0 +1,46 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+  background-color: $grey4;
+
+  .logo {
+    height: 35px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    a {
+      margin-left: 50px;
+      text-decoration: none;
+      color: $primary1;
+      font-weight: bold;
+      white-space: nowrap;
+
+      &:hover {
+        color: $primary1-light;
+      }
+    }
+
+    a.primary {
+      background-color: $primary1;
+      padding: 10px;
+      color: $white;
+
+      &:hover {
+        background-color: $primary1-light;
+      }
+    }
+  }
+
+  img {
+    display: block;
+  }
+
+}
+
+.flag {
+  width: 27px;
+}

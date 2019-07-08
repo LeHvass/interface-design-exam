@@ -1,0 +1,213 @@
+// Text inputs
+
+.input, select {
+  border-color: $grey1;
+  border-width: 4px;
+  border-style: solid;
+  color: $primary3;
+  background: $grey1;
+  padding: 8px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  height: 48px;
+  
+  &:disabled {
+      background: $white;
+      color: $grey1;
+  }
+  
+  &.input-success {
+    color: $success;
+    border-color: $success;
+    background: $white; 
+  }
+  
+  &.input-danger {
+    color: $danger;
+    border-color: $danger;
+    background: $white; 
+  }
+}
+
+.input-full-width {
+  width: 100%;
+}
+
+.currency {
+  font-weight: bold;
+  font-size: 14px;
+  position: absolute;
+  top: 46%;
+  right: 50px;
+  transform: translateY(-50%);
+}
+
+#input-budget:after, #input-budget::after {
+  content: "DKK";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+}
+
+// Checkboxes & Radios
+
+.input-radio, .input-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.input-checkbox input, .input-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.input-checkbox .checkmark,
+.input-radio .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 23px;
+  width: 23px;
+  background-color: $grey1;
+}
+
+.input-radio .checkmark {
+  border-radius: 50%;
+}
+.input-checkbox .checkmark {
+  border-radius: 6px;
+}
+
+.input-checkbox:hover input ~ .checkmark,
+.input-radio:hover input ~ .checkmark {
+  background-color: darken($grey1,5%);
+}
+
+.input-checkbox input:checked ~ .checkmark,
+.input-radio input:checked ~ .checkmark {
+  background-color: $grey1;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.input-checkbox input:checked ~ .checkmark:after,
+.input-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.input-checkbox .checkmark:after,
+.input-radio .checkmark:after {
+  left: 4px;
+  top: 4px;
+  width: 15px;
+  height: 15px;
+  background: $primary2;
+}
+
+.input-checkbox .checkmark:after {
+  border-radius: 3px;
+}
+
+.input-radio .checkmark:after {
+  border-radius: 50%;
+}
+
+/* Slider Button */
+
+  .switch-group {
+    padding: 30px;
+  }
+
+  .input-switch-label {
+    position: absolute;
+    left: 76px;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 14px;
+    color: $grey7;
+  }
+
+ /* The switch - the box around the slider */
+ .input-switch {
+  position: relative;
+  display: block;
+  width: 46px;
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+/* Hide default HTML checkbox */
+.input-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.input-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $grey1;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.input-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 1px;
+  bottom: 1px;
+  background-color: $white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.input-switch input:checked + .input-slider {
+  background-color: $primary2;
+}
+
+.input-switch input:checked + .input-slider:before {
+  background-color: $primary2-light;
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.input-slider.input-round {
+  border-radius: 34px;
+}
+
+.input-slider.input-round:before {
+  border-radius: 50%;
+} 
+
+
+/* Select */
+.select {
+  background-color: $grey1;
+
+}

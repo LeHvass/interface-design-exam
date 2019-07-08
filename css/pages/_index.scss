@@ -1,0 +1,52 @@
+.index {
+  header {
+    background: transparent;
+  }
+
+  main {
+    margin-left: 30px;
+  }
+
+  .container {
+    grid-template-rows: fit-content(100px) auto fit-content(150px);
+
+    background-image: url('../images/search-bg2.png');
+    background-position: 550px top;
+    background-size: initial;
+    background-repeat: no-repeat;
+  }
+
+  form {
+    max-width: 750px;
+
+    & > div {
+      display: flex;
+    }
+  }
+
+  #input-dateFrom, #input-dateTo {
+    width: 130px;
+  }
+  
+  .flex-grow {
+    flex: 1;
+  }
+
+  .popover {
+    padding: 15px;
+    position: absolute;
+    left: 0;
+    display: none;
+    background-color: $white;
+    width: 250px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.18);
+  }
+
+  .popover-parent {
+    position: relative;
+  }
+
+  .field {
+    position: relative;
+  }
+}

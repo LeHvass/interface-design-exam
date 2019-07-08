@@ -1,0 +1,38 @@
+footer {
+  background: $grey4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+
+  .motto {
+    color: $grey2;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  nav {
+    display: flex;
+    font-size: 12px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+    }
+
+    div,
+    a {
+      color: $grey2;
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: $grey2-dark;
+      }
+    }
+  }
+}

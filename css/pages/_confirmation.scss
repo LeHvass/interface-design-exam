@@ -1,0 +1,25 @@
+.confirmation {
+  header {
+    background: transparent;
+  }
+
+  .container {
+    grid-template-rows: fit-content(100px) auto fit-content(150px);
+  }
+  
+  main{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .confirmation-text{
+    max-width: 700px;
+    padding: 30px;
+  }
+  
+  .confirmation-text h3{
+    color: #A2A2A2;
+  }
+
+}

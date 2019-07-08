@@ -1,0 +1,29 @@
+@import 'layout';
+@import 'colors';
+@import 'spacing';
+@import 'typography';
+@import 'buttons';
+@import 'components/nav';
+@import 'components/footer';
+@import 'inputs';
+@import 'pages/login';
+@import 'pages/index';
+@import 'pages/search';
+@import 'pages/hotel';
+@import 'pages/confirmation';
+@import 'pages/booking';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
